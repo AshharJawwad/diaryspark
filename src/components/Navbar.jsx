@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="flex fixed h-16 w-full justify-between pl-2 bg-white/70 backdrop-blur-xs border-b lg:border-none md:bg-white/70 md:backdrop-blur-xs lg:backdrop-blur-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 lg:bg-transparent">
+    <nav className="flex fixed h-16 w-full justify-between px-2 bg-white/70 backdrop-blur-xs border-b lg:border-none md:bg-white/70 md:backdrop-blur-xs lg:backdrop-blur-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 lg:bg-transparent">
       {/* Logo Area */}
       <div className="text-center lg:bg-white/70 lg:backdrop-blur-xs lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-extrabold font-mono">DiarySpark</h2>
@@ -38,7 +38,7 @@ export default function Navbar() {
       </div>
 
       {/* Login Button & Mobile Navigation Area */}
-      <div className="flex justify-center px-0 lg:p-2 lg:bg-white/70 lg:backdrop-blur-xs lg:rounded-full min-w-38">
+      <div className="flex justify-center lg:p-2 lg:bg-white/70 lg:backdrop-blur-xs lg:rounded-full lg:min-w-38">
         <Button className="bg-primary font-mono text-sm cursor-pointer">
           Login/Register
         </Button>
