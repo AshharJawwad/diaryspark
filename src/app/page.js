@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="p-5">
-      <p className="-z-20">
+      <p className="-z-40 text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
         consequuntur nesciunt eum nobis obcaecati, fugiat tempore laudantium qui
         eius sint harum accusantium quaerat facilis! Laborum aut doloremque
