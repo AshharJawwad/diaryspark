@@ -16,35 +16,32 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="flex fixed h-16 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
+    <nav className="flex font-body fixed h-16 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
       <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
-        <h2 className="text-2xl font-extrabold font-mono">DiarySpark</h2>
+        <h2 className="text-2xl font-display font-extrabold">DiarySpark</h2>
       </div>
 
       {/* Navigation Area */}
       <div className="hidden lg:flex lg:items-center lg:justify-center lg:p-2 lg:rounded-full">
-        <Link
-          href="/"
-          className="mx-3 font-mono font-semibold text-lg cursor-pointer"
-        >
+        <Link href="/" className="mx-3 font-semibold text-lg cursor-pointer">
           Home
         </Link>
         <Link
           href="/blog"
-          className="mx-3 font-mono font-semibold text-lg cursor-pointer"
+          className="mx-3 font-semibold text-lg cursor-pointer"
         >
           Blog
         </Link>
         <Link
           href="/quiz"
-          className="mx-3 font-mono font-semibold text-lg cursor-pointer"
+          className="mx-3 font-semibold text-lg cursor-pointer"
         >
           Quiz
         </Link>
         <Link
           href="/challenge"
-          className="mx-3 font-mono font-semibold text-lg cursor-pointer"
+          className="mx-3 font-semibold text-lg cursor-pointer"
         >
           Challenge
         </Link>
@@ -52,7 +49,7 @@ export default function Navbar() {
 
       {/* Login Button & Mobile Navigation Area */}
       <div className="flex justify-center gap-2 lg:rounded-full lg:min-w-38">
-        <Button className="font-mono font-semibold text-lg cursor-pointer py-1 px-3">
+        <Button className="h-8 font-semibold text-lg cursor-pointer py-1 px-3">
           Login
         </Button>
 
@@ -67,39 +64,37 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader className="">
-                <SheetTitle className="font-sans text-3xl font-extrabold">
+                <SheetTitle className="font-display text-3xl font-extrabold">
                   DiarySpark
                 </SheetTitle>
-                <SheetDescription className="flex flex-col gap-y-2 mt-16 p-3 border-b">
+                <SheetDescription className="flex flex-col font-body font-semibold text-lg gap-y-2 mt-16 p-3 border-b">
                   <Link
                     href="/"
-                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Home
                   </Link>
                   <Link
                     href="/blog"
-                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Blog
                   </Link>
                   <Link
                     href="/quiz"
-                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Quiz
                   </Link>
                   <Link
                     href="/challenge"
-                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Challenge
                   </Link>
                 </SheetDescription>
-                <div className="flex flex-col mt-48 pr-3 border-b">
-                  <h1 className="font-extrabold font-sans text-3xl">
-                    Quixk Settings
-                  </h1>
+                <div className="flex flex-col mt-36 pr-3 border-b">
+                  <h2 className="font-extrabold font-display text-3xl">Accessibility</h2>
                   <div className="flex gap-2 w-full mt-5 mb-3">
                     <Button variant="outline" className="w-1/3 h-10">
                       <Accessibility className="w-10 h-10" />
@@ -124,14 +119,14 @@ export default function Navbar() {
                   </div>
                 </div>
               </SheetHeader>
-              <SheetFooter>
+              <SheetFooter className="font-body">
                 <div className="flex flex-col gap-y-3">
-                  <Button className="w-full h-10 font-mono text-lg font-semibold">
+                  <Button className="w-full h-10 text-lg font-semibold">
                     Login
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full h-10 font-mono text-lg font-semibold"
+                    className="w-full h-10 text-lg font-semibold"
                   >
                     Register
                   </Button>
