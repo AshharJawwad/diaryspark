@@ -16,7 +16,7 @@ export default function Home() {
         />
 
         <div className="absolute h-full w-full text-center items-center px-10 md:px-24 bg-white/30 backdrop-blur-xs lg:text-left lg:w-[50%] lg:py-32 lg:pl-14 lg:pr-32 lg:bg-white/30 lg:backdrop-blur-lg lg:rounded-r-full">
-          <h1 className="text-3xl font-display mt-80 md:mt-64 md:text-5xl lg:mt-20 text-primary">
+          <h1 className="text-3xl font-display font-bold mt-80 md:mt-64 md:text-5xl lg:mt-20 text-primary">
             Read Blogs, Learn from Quizzes, and Take on Challanges
           </h1>
           <p className="md:text-xl mt-7 md:mt-3 text-secondary-foreground">
