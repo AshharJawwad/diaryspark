@@ -16,14 +16,14 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="flex fixed h-16 w-full justify-between px-2 bg-white/70 backdrop-blur-xs border-b lg:border-none md:bg-white/70 md:backdrop-blur-xs lg:backdrop-blur-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 lg:bg-transparent">
+    <nav className="flex fixed h-16 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
-      <div className="text-center lg:bg-white/70 lg:backdrop-blur-xs lg:p-2 lg:rounded-full lg:w-44">
+      <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-extrabold font-mono">DiarySpark</h2>
       </div>
 
       {/* Navigation Area */}
-      <div className="hidden sm:bg-none sm:backdrop-blur-none lg:flex lg:items-center lg:justify-center lg:bg-white/70 lg:backdrop-blur-xs lg:p-2 lg:rounded-full">
+      <div className="hidden lg:flex lg:items-center lg:justify-center lg:p-2 lg:rounded-full">
         <Link
           href="/"
           className="mx-3 font-mono font-semibold text-lg cursor-pointer"
@@ -51,9 +51,9 @@ export default function Navbar() {
       </div>
 
       {/* Login Button & Mobile Navigation Area */}
-      <div className="flex justify-center gap-2 lg:p-2 lg:bg-white/70 lg:backdrop-blur-xs lg:rounded-full lg:min-w-38">
-        <Button className="bg-primary font-mono text-sm cursor-pointer">
-          Login/Register
+      <div className="flex justify-center gap-2 lg:rounded-full lg:min-w-38">
+        <Button className="font-mono font-semibold text-lg cursor-pointer py-1 px-3">
+          Login
         </Button>
 
         {/* Mobile Navigation */}
@@ -61,51 +61,80 @@ export default function Navbar() {
           <Sheet>
             <SheetTrigger
               className="border items-center p-1 rounded-md"
-              aschild
+              aschild="true"
             >
               <Menu className="h-6 w-6" />
             </SheetTrigger>
             <SheetContent>
-              <SheetHeader className="border-b">
-                <SheetTitle className="font-sans text-3xl font-extrabold">DiarySpark</SheetTitle>
-                <SheetDescription className="flex flex-col gap-y-2 mt-16 p-3">
+              <SheetHeader className="">
+                <SheetTitle className="font-sans text-3xl font-extrabold">
+                  DiarySpark
+                </SheetTitle>
+                <SheetDescription className="flex flex-col gap-y-2 mt-16 p-3 border-b">
                   <Link
                     href="/"
-                    className="mx-3 font-mono sm:text-center md:text-start font-semibold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Home
                   </Link>
                   <Link
                     href="/blog"
-                    className="mx-3 font-mono sm:text-center md:text-start font-semibold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Blog
                   </Link>
                   <Link
                     href="/quiz"
-                    className="mx-3 font-mono sm:text-center md:text-start font-semibold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Quiz
                   </Link>
                   <Link
                     href="/challenge"
-                    className="mx-3 font-mono sm:text-center md:text-start font-semibold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
+                    className="mx-3 font-mono sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
                     Challenge
                   </Link>
                 </SheetDescription>
-              </SheetHeader>
-              <div className="flex flex-col mt-80 px-5 border-b">
-                <h1 className="font-extrabold font-sans text-3xl">Quixk Settings</h1>
-                <div className="flex gap-3 w-1/3 mt-5 mb-7">
-                  <Button variant="outline" className="w-full h-10"><Accessibility className="w-10 h-10" /></Button>
-                  <Button className="w-full h-10"><Settings className="w-10 h-10" /></Button>
+                <div className="flex flex-col mt-48 pr-3 border-b">
+                  <h1 className="font-extrabold font-sans text-3xl">
+                    Quixk Settings
+                  </h1>
+                  <div className="flex gap-2 w-full mt-5 mb-3">
+                    <Button variant="outline" className="w-1/3 h-10">
+                      <Accessibility className="w-10 h-10" />
+                    </Button>
+                    <Button className="w-1/3 h-10">
+                      <Settings className="w-10 h-10" />
+                    </Button>
+                    <Button variant="outline" className="w-1/3 h-10">
+                      <Settings className="w-10 h-10" />
+                    </Button>
+                  </div>
+                  <div className="flex gap-2 w-full mt-3 mb-7">
+                    <Button variant="outline" className="w-1/3 h-10">
+                      <Accessibility className="w-10 h-10" />
+                    </Button>
+                    <Button className="w-1/3 h-10">
+                      <Settings className="w-10 h-10" />
+                    </Button>
+                    <Button variant="outline" className="w-1/3 h-10">
+                      <Settings className="w-10 h-10" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
+              </SheetHeader>
               <SheetFooter>
                 <div className="flex flex-col gap-y-3">
-                  <Button className="w-full h-10 font-mono text-lg font-semibold">Login</Button>
-                  <Button variant="outline" className="w-full h-10 font-mono text-lg font-semibold">Register</Button>
+                  <Button className="w-full h-10 font-mono text-lg font-semibold">
+                    Login
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full h-10 font-mono text-lg font-semibold"
+                  >
+                    Register
+                  </Button>
                 </div>
               </SheetFooter>
             </SheetContent>
