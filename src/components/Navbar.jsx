@@ -43,7 +43,7 @@ export default function Navbar() {
           href="/challenge"
           className="mx-3 font-semibold text-lg cursor-pointer"
         >
-          Challenge
+          Quest
         </Link>
       </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
                     href="/challenge"
                     className="mx-3 sm:text-center md:text-start font-bold sm:text-lg md:text-xl w-full rounded-md p-2 cursor-pointer"
                   >
-                    Challenge
+                    Quest
                   </Link>
                 </SheetDescription>
                 <div className="flex flex-col mt-36 pr-3 border-b">
