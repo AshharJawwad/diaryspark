@@ -16,7 +16,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="flex font-body fixed h-16 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
+    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
       <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-display font-extrabold">DiarySpark</h2>
@@ -24,24 +24,24 @@ export default function Navbar() {
 
       {/* Navigation Area */}
       <div className="hidden lg:flex lg:items-center lg:justify-center lg:p-2 lg:rounded-full">
-        <Link href="/" className="mx-3 font-semibold text-lg cursor-pointer">
+        <Link href="/" className="mx-3 text-lg cursor-pointer">
           Home
         </Link>
         <Link
           href="/blog"
-          className="mx-3 font-semibold text-lg cursor-pointer"
+          className="mx-3 text-lg cursor-pointer"
         >
           Blog
         </Link>
         <Link
           href="/quiz"
-          className="mx-3 font-semibold text-lg cursor-pointer"
+          className="mx-3 text-lg cursor-pointer"
         >
           Quiz
         </Link>
         <Link
           href="/challenge"
-          className="mx-3 font-semibold text-lg cursor-pointer"
+          className="mx-3 text-lg cursor-pointer"
         >
           Quest
         </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
 
       {/* Login Button & Mobile Navigation Area */}
       <div className="flex justify-center gap-2 lg:rounded-full lg:min-w-38">
-        <Button className="h-8 font-semibold text-lg cursor-pointer py-1 px-3">
+        <Button className="h-8 text-lg cursor-pointer rounded-full py-1 px-3">
           Login
         </Button>
 
@@ -121,12 +121,12 @@ export default function Navbar() {
               </SheetHeader>
               <SheetFooter className="font-body">
                 <div className="flex flex-col gap-y-3">
-                  <Button className="w-full h-10 text-lg font-semibold">
+                  <Button className="w-full h-10 text-lg font-semibold rounded-full">
                     Login
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full h-10 text-lg font-semibold"
+                    className="w-full h-10 text-lg font-semibold rounded-full"
                   >
                     Register
                   </Button>

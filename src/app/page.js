@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="font-body mt-16">
+    <div className="font-body mt-12">
       {/* Hero Section */}
       <section className="relative h-175 md:h-155 w-full md:w-7xl lg:w-12xl xl:w-full sm:aspect-square md:aspect-video overflow-hidden">
         <Image
@@ -27,19 +27,19 @@ export default function Home() {
           <div className="flex justify-center lg:justify-start md:flex mt-5 gap-3 md:flex-row">
             <Button
               variant="secondary"
-              className="h-8 py-1 px-3 text-lg font-semibold w-28 cursor-pointer"
+              className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
             >
               Quizzes
             </Button>
             <Button
               variant="outline"
-              className="h-8 py-1 px-3 text-lg font-semibold w-28 cursor-pointer"
+              className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
             >
               Blogs
             </Button>
             <Button
               variant="secondary"
-              className="h-8 py-1 px-3 text-lg font-semibold w-28 cursor-pointer"
+              className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
             >
               Quest
             </Button>
@@ -48,23 +48,23 @@ export default function Home() {
       </section>
 
       {/* Content Area */}
-      <section className="min-h-96 md:w-7xl mx-auto mt-5 pt-5 pb-5 items-center justify-center">
-        <div className="w-105 md:w-4xl lg:w-6xl min-h-96 p-3 shadow-md mx-auto mb-7 rounded-md">
+      <section className="min-h-96 w-108 md:w-7xl mx-auto mt-5 pt-5 pb-5 items-center justify-center">
+        <div className="w-103 md:w-4xl lg:w-6xl min-h-96 p-3 shadow-md mx-auto mb-7 rounded-lg">
           <h1 className="font-display font-semibold text-2xl pb-3 border-b">
-            Recent Blogs
+            New Blogs
           </h1>
         </div>
-        <div className="w-105 md:w-4xl lg:w-6xl min-h-88 p-3 shadow-md mx-auto mb-7 rounded-md">
+        <div className="w-103 md:w-4xl lg:w-6xl min-h-88 p-3 shadow-md mx-auto mb-7 rounded-lg">
           <h1 className="font-display font-semibold text-2xl pb-3 border-b">
-            Recent Quizzes
+            New Quizzes
           </h1>
         </div>
-        <div className="w-105 md:w-4xl lg:w-6xl min-h-88 p-3 shadow-md mx-auto rounded-md">
+        <div className="w-103 md:w-4xl lg:w-6xl min-h-88 p-3 shadow-md mx-auto rounded-lg">
           <h1 className="font-display font-semibold text-2xl pb-3 border-b">
             New Quests
           </h1>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
