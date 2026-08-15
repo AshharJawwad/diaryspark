@@ -13,6 +13,7 @@ import {
   SheetTrigger,
   SheetDescription,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
   return (
@@ -48,10 +49,12 @@ export default function Navbar() {
       </div>
 
       {/* Login Button & Mobile Navigation Area */}
-      <div className="flex justify-center gap-2 lg:rounded-full lg:min-w-38">
+      <div className="flex items-center justify-center gap-2 lg:rounded-full lg:min-w-38">
         <Button className="h-8 text-lg cursor-pointer rounded-full py-1 px-3">
           Login
         </Button>
+        
+        <ModeToggle />
 
         {/* Mobile Navigation */}
         <div className="items-center lg:hidden">

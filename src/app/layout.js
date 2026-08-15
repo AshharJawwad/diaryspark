@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Roboto, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { icons } from "lucide-react";
+import ThemeProvider from "@/components/ThemePtovider";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -37,10 +38,18 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="grow">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
