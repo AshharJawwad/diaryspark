@@ -18,7 +18,7 @@ import { MobNavMode } from "./ui/MobNavMode";
 
 export default function Navbar() {
   return (
-    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white dark:bg-background shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
+    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white dark:bg-background shadow-sm lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
       <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-display font-extrabold">DiarySpark</h2>
@@ -90,15 +90,15 @@ export default function Navbar() {
                 </SheetDescription>
                 <div className="flex flex-col mt-36 pr-3 border-b">
                   <h2 className="font-extrabold font-display text-3xl">
-                    Accessibility
+                    Actions
                   </h2>
                   <div className="flex gap-2 w-full mt-5 mb-3">
                     <Button className="w-1/3 h-10">
-                      <Settings className="w-10 h-10" />
+                      <Settings className="w-[1.2rem] h-[1.2rem]" />
                     </Button>
                     <MobNavMode />
                     <Button className="w-1/3 h-10">
-                      <Accessibility className="w-10 h-10" />
+                      <Accessibility className="w-[1.2rem] h-[1.2rem]" />
                     </Button>
                   </div>
                   <div className="flex gap-2 w-full mt-3 mb-7">
