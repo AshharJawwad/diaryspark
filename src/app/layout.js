@@ -2,7 +2,7 @@ import { Geist, Geist_Mono, Roboto, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { icons } from "lucide-react";
-import ThemeProvider from "@/components/ThemePtovider";
+import { ThemeProvider } from "@/components/ThemePtovider";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],

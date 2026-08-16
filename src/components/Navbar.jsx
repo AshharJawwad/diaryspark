@@ -13,11 +13,12 @@ import {
   SheetTrigger,
   SheetDescription,
 } from "@/components/ui/sheet";
-import { ModeToggle } from "./ModeToggle";
+import { ModeToggle } from "./ui/ModeToggle";
+import { MobNavMode } from "./ui/MobNavMode";
 
 export default function Navbar() {
   return (
-    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
+    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white dark:bg-background shadow-md lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
       <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-display font-extrabold">DiarySpark</h2>
@@ -28,33 +29,24 @@ export default function Navbar() {
         <Link href="/" className="mx-3 text-lg cursor-pointer">
           Home
         </Link>
-        <Link
-          href="/blog"
-          className="mx-3 text-lg cursor-pointer"
-        >
+        <Link href="/blog" className="mx-3 text-lg cursor-pointer">
           Blog
         </Link>
-        <Link
-          href="/quiz"
-          className="mx-3 text-lg cursor-pointer"
-        >
+        <Link href="/quiz" className="mx-3 text-lg cursor-pointer">
           Quiz
         </Link>
-        <Link
-          href="/challenge"
-          className="mx-3 text-lg cursor-pointer"
-        >
+        <Link href="/challenge" className="mx-3 text-lg cursor-pointer">
           Quest
         </Link>
       </div>
 
       {/* Login Button & Mobile Navigation Area */}
       <div className="flex items-center justify-center gap-2 lg:rounded-full lg:min-w-38">
+        <ModeToggle />
+
         <Button className="h-8 text-lg cursor-pointer rounded-full py-1 px-3">
           Login
         </Button>
-        
-        <ModeToggle />
 
         {/* Mobile Navigation */}
         <div className="items-center lg:hidden">
@@ -97,16 +89,16 @@ export default function Navbar() {
                   </Link>
                 </SheetDescription>
                 <div className="flex flex-col mt-36 pr-3 border-b">
-                  <h2 className="font-extrabold font-display text-3xl">Accessibility</h2>
+                  <h2 className="font-extrabold font-display text-3xl">
+                    Accessibility
+                  </h2>
                   <div className="flex gap-2 w-full mt-5 mb-3">
-                    <Button variant="outline" className="w-1/3 h-10">
-                      <Accessibility className="w-10 h-10" />
-                    </Button>
                     <Button className="w-1/3 h-10">
                       <Settings className="w-10 h-10" />
                     </Button>
-                    <Button variant="outline" className="w-1/3 h-10">
-                      <Settings className="w-10 h-10" />
+                    <MobNavMode />
+                    <Button className="w-1/3 h-10">
+                      <Accessibility className="w-10 h-10" />
                     </Button>
                   </div>
                   <div className="flex gap-2 w-full mt-3 mb-7">

@@ -19,26 +19,26 @@ export default function Home() {
           <h1 className="text-3xl font-display font-bold mt-80 md:mt-64 md:text-5xl lg:mt-20 text-primary">
             &apos; Your Space to Reflect, Grow, and Be Yourself &apos;
           </h1>
-          <p className="md:text-xl mt-7 md:mt-3 text-secondary-foreground">
+          <p className="md:text-xl mt-7 md:mt-3 text-secondary dark:text-secondary">
             Take Time to reflect, set meaningful goals, and work toward becoming
             your best self in an environment built to feel simple, encouraging
             and personal.
           </p>
           <div className="flex justify-center lg:justify-start md:flex mt-5 gap-3 md:flex-row">
             <Button
-              variant="secondary"
+              variant=""
               className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
             >
               Quizzes
             </Button>
             <Button
               variant="outline"
-              className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
+              className="h-8 py-1 px-3 dark:text-black text-lg w-28 rounded-full cursor-pointer"
             >
               Blogs
             </Button>
             <Button
-              variant="secondary"
+              variant=""
               className="h-8 py-1 px-3 text-lg w-28 rounded-full cursor-pointer"
             >
               Quest
