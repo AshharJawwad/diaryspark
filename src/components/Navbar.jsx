@@ -42,8 +42,10 @@ export default function Navbar() {
 
       {/* Login Button & Mobile Navigation Area */}
       <div className="flex items-center justify-center gap-2 lg:rounded-full lg:min-w-38">
-        <ModeToggle />
+        {/* Mode Toggle Butten for Mobile and Mini Tablet Devices */}
+        <ModeToggle className="md:hidden" />
 
+        {/* Login/register Button */}
         <Button className="h-8 text-lg cursor-pointer rounded-full py-1 px-3">
           Login
         </Button>

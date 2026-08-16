@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { icons } from "lucide-react";
 import { ThemeProvider } from "@/components/ThemePtovider";
+import { ActionBar } from "@/components/ActionBar";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -48,7 +49,10 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="grow">{children}</main>
+          <main className="relative grow">
+            <ActionBar />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
