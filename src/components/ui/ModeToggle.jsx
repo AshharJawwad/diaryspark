@@ -11,7 +11,7 @@ function useMounted() {
   return React.useSyncExternalStore(
     () => () => {},
     () => true,
-    () => false
+    () => false,
   );
 }
 
@@ -55,7 +55,7 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
     disabled,
     ...props
   },
-  ref
+  ref,
 ) {
   const { theme = "system", setTheme } = useTheme();
   const mounted = useMounted();
@@ -70,14 +70,19 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
     onClick?.(event);
   };
 
-  // Keyboard navigation support: Arrow keys & Home/End
-  const handleKeyDown = (event) => {
-    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+  // Keyboard navigation support: Control Key + m/M to Switch Mode & Control Key + p/P to switch to Previous Mode
+  const handleChange = (event) => {
+    if (event.ctrlKey && (event.key === "m" || event.key === "M")) {
       event.preventDefault();
       setTheme(nextTheme);
-    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+    } else if (event.ctrlKey && (event.key === "p" || event.key === "P")) {
       event.preventDefault();
-      const prevTheme = currentTheme === "light" ? "system" : currentTheme === "dark" ? "light" : "dark";
+      const prevTheme =
+        currentTheme === "light"
+          ? "system"
+          : currentTheme === "dark"
+            ? "light"
+            : "dark";
       setTheme(prevTheme);
     } else if (event.key === "Home") {
       event.preventDefault();
@@ -114,14 +119,14 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
       size={size}
       disabled={disabled}
       onClick={cycleTheme}
-      onKeyDown={handleKeyDown}
+      onKeyDown={handleChange}
       role="button"
       aria-label={`Current theme: ${currentConfig.label}. Press to switch to ${nextConfig.label} theme.`}
       aria-pressed={currentTheme !== "system"}
       title={`${currentConfig.label} mode`}
       className={cn(
         "relative overflow-hidden transition-colors rounded-full focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer",
-        className
+        className,
       )}
       {...props}
     >
@@ -132,7 +137,7 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
           "h-[1.2rem] w-[1.2rem] transition-all duration-300 ease-in-out text-amber-500",
           currentTheme === "light"
             ? THEME_CONFIG.light.activeClasses
-            : THEME_CONFIG.light.inactiveClasses
+            : THEME_CONFIG.light.inactiveClasses,
         )}
       />
 
@@ -143,7 +148,7 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
           "h-[1.2rem] w-[1.2rem] transition-all duration-300 ease-in-out text-blue-500",
           currentTheme === "dark"
             ? THEME_CONFIG.dark.activeClasses
-            : THEME_CONFIG.dark.inactiveClasses
+            : THEME_CONFIG.dark.inactiveClasses,
         )}
       />
 
@@ -154,7 +159,7 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
           "h-[1.2rem] w-[1.2rem] transition-all duration-300 ease-in-out text-emerald-500",
           currentTheme === "system"
             ? THEME_CONFIG.system.activeClasses
-            : THEME_CONFIG.system.inactiveClasses
+            : THEME_CONFIG.system.inactiveClasses,
         )}
       />
 

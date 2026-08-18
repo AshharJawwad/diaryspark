@@ -49,10 +49,8 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="relative grow">
-            <ActionBar />
-            {children}
-          </main>
+          <ActionBar />
+          <main className="relative grow">{children}</main>
         </ThemeProvider>
       </body>
     </html>

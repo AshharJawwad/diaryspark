@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Accessibility, LogOut, Menu, Settings, X } from "lucide-react";
+import { Accessibility, LogOut, Menu, Settings } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -18,7 +18,7 @@ import { MobNavMode } from "./ui/MobNavMode";
 
 export default function Navbar() {
   return (
-    <nav className="flex font-body fixed h-12 w-full z-40 justify-between px-2 bg-white dark:bg-background shadow-sm lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
+    <nav className="flex font-body fixed h-14 w-full z-40 justify-between px-2 bg-white dark:bg-background shadow-sm lg:border-none lg:justify-around items-center sm:px-2 sm:z-40 lg:px-5 lg:z-30 ">
       {/* Logo Area */}
       <div className="text-center lg:p-2 lg:rounded-full lg:w-44">
         <h2 className="text-2xl font-display font-extrabold">DiarySpark</h2>
