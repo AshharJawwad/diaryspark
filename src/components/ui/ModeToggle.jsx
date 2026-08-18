@@ -70,12 +70,12 @@ export const ModeToggle = React.forwardRef(function ModeToggle(
     onClick?.(event);
   };
 
-  // Keyboard navigation support: Control Key + m/M to Switch Mode & Control Key + p/P to switch to Previous Mode
+  // Keyboard navigation support: Control Key + ,/< to Switch Mode & Control Key + ./> to switch to Previous Mode
   const handleChange = (event) => {
-    if (event.ctrlKey && (event.key === "m" || event.key === "M")) {
+    if (event.ctrlKey && (event.key === "," || event.key === "<")) {
       event.preventDefault();
       setTheme(nextTheme);
-    } else if (event.ctrlKey && (event.key === "p" || event.key === "P")) {
+    } else if (event.ctrlKey && (event.key === "." || event.key === ">")) {
       event.preventDefault();
       const prevTheme =
         currentTheme === "light"
